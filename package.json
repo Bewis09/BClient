@@ -1,10 +1,20 @@
 {
   "dependencies": {
+    "express": "^4.19.1",
+    "path": "^0.12.7",
+    "sass": "^1.72.0",
     "ts-node": "^10.9.2",
     "tsc": "^2.0.4",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "ws": "^8.16.0"
   },
   "scripts": {
-    "start": "cd frontend && npm run build && cd .. && ts-node backend/backend.ts"
+    "start": "npm run build && npm run run-server",
+    "run-server": "ts-node backend/backend.ts",
+    "build": "cd frontend && npm run build && cd .."
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/ws": "^8.5.10"
   }
 }
